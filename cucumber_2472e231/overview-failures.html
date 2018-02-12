@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 0) - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>EtherCIS-VEHR-features</td>
+              <td>0</td>
+            <td>12 Feb 2018, 17:53</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+          <p>The following summary displays scenarios that failed.</p>
+      </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+              <div class="elements">
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_RestApiComposition-feature.html">Provide Composition API access over REST</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">814ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Commit composition in flat json and retrieve raw format</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Flat json file IDCR - Immunisation summary.v0.flat.json with template id IDCR - Immunisation summary.v0 is committed to service</span>
+  
+  <span class="lead-duration duration">643ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">A composition id should be returned by the API</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">And</span>
+  <span class="name">Composition id should allow retrieval of composition in raw format</span>
+  
+  <span class="lead-duration duration">170ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError: 1 expectation failed.</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; doesn't match actual status code &lt;500&gt;.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)
+	at com.jayway.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+	at com.ethercis.vehr.CompositionAPISteps.getComposition(CompositionAPISteps.java:73)
+	at com.ethercis.vehr.CompositionAPISteps.compositionIdShouldAllowRetrievalOfCompositionInRawFormat(CompositionAPISteps.java:60)
+	at &#10045;.And Composition id should allow retrieval of composition in raw format(RestApiComposition.feature:21)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-4" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">CompositionAPISteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">014ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">QueryWithAqlSteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">000ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_code4health-Aql-feature.html">Support for openEHR Archetype Query Language</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 479ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
+    
+<div class="brief failed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">The server is ready, an EHR and required templates is in place and the user logged in and created data.</div>
+
+  <div id="element-5" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The server is running</span>
+  
+  <span class="lead-duration duration">1s 435ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The client system is logged into a server session</span>
+  
+  <span class="lead-duration duration">033ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">And</span>
+  <span class="name">The templates with following ids are available to the server:</span>
+  
+  <span class="lead-duration duration">011ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+          <a>java.lang.RuntimeException: java.nio.file.NoSuchFileException: /home/travis/build/serefarikan/VirtualEhr/vehr-integration-tests/target/test-classes/test_data/code4health/opt/IDCR - Adverse Reaction List.v1.opt</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>java.lang.RuntimeException: java.nio.file.NoSuchFileException: /home/travis/build/serefarikan/VirtualEhr/vehr-integration-tests/target/test-classes/test_data/code4health/opt/IDCR - Adverse Reaction List.v1.opt
+	at com.ethercis.vehr.RestAPIBackgroundSteps.postTemplateToServer(RestAPIBackgroundSteps.java:128)
+	at com.ethercis.vehr.AqlFeaturesSteps.lambda$theTemplatesWithFollowingIdsAreAvailableToTheServer$2(AqlFeaturesSteps.java:106)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1080)
+	at com.ethercis.vehr.AqlFeaturesSteps.theTemplatesWithFollowingIdsAreAvailableToTheServer(AqlFeaturesSteps.java:106)
+	at &#10045;.And The templates with following ids are available to the server:(code4health/Aql.feature:11)
+Caused by: java.nio.file.NoSuchFileException: /home/travis/build/serefarikan/VirtualEhr/vehr-integration-tests/target/test-classes/test_data/code4health/opt/IDCR - Adverse Reaction List.v1.opt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at com.ethercis.vehr.RestAPIBackgroundSteps.postTemplateToServer(RestAPIBackgroundSteps.java:117)
+	at com.ethercis.vehr.AqlFeaturesSteps.lambda$theTemplatesWithFollowingIdsAreAvailableToTheServer$2(AqlFeaturesSteps.java:106)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1080)
+	at com.ethercis.vehr.AqlFeaturesSteps.theTemplatesWithFollowingIdsAreAvailableToTheServer(AqlFeaturesSteps.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.runBackground(CucumberScenario.java:59)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:42)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:369)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:275)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:239)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:160)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Smart Growth Chart Data.v0</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">An EHR is created</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">The following compositions exists under the EHR:</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.0.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.1.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_End_of_Life_Patient_Preferences.v0.0.json</td>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.0.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.1.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.0.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.1.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.2.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.0.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.1.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.2.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.0.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.1.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.2.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.0.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.1.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.0.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.1.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.2.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.3.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.4.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.5.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.0.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.1.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.2.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.3.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.4.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.0.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.1.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.2.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.0.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.1.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.2.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.0.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.1.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.2.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.3.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.0.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.1.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.2.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.0.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.1.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.2.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_code4health-Aql-feature.html">Support for openEHR Archetype Query Language</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Composition contains instruction</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">A composition which contains an instruction is queried. The composition sits under the EHR.
+AQL query specifies EHR id, Composition archetype node id and instruction archetype node id.
+The query uses WHERE clause to add Composition name as an extra criteria. The returned data
+consists of uid, composer, event context start time and some data from the activities under the instruction.</div>
+
+  <div id="element-8" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">A an AQL query that describes an instruction under a composition is created</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">The query contains EHR id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Composition archetype id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Composition name criteria using WHERE clause</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">Instruction archetype id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The following data items should be available in query results:</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>composition_uid</td>
+                              </tr>
+                          <tr>
+                                  <td>composition_composer</td>
+                              </tr>
+                          <tr>
+                                  <td>context_start_time</td>
+                              </tr>
+                          <tr>
+                                  <td>activity_data</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-10" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">CompositionAPISteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">017ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">QueryWithAqlSteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">000ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
