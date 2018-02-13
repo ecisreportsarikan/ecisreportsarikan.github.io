@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>EtherCIS-VEHR-features</td>
+              <td>0</td>
+            <td>13 Feb 2018, 17:24</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.aAnAQLQueryThatDescribesAnCompositionUnderAnEHRIsCreated()</td>
+              <td>1</td>
+              <td class="duration" data-value="250602">000ms</td>
+              <td class="duration" data-value="250602">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.aAnAQLQueryThatDescribesAnInstructionUnderACompositionIsCreated()</td>
+              <td>1</td>
+              <td class="duration" data-value="631811">000ms</td>
+              <td class="duration" data-value="631811">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.aAnAQLQueryThatDescribesAnInstructionUnderAnEHRIsCreated()</td>
+              <td>1</td>
+              <td class="duration" data-value="207092">000ms</td>
+              <td class="duration" data-value="207092">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.anAQLQueryThatSelectsCompositionUidsAndDataItemsIsCreated()</td>
+              <td>1</td>
+              <td class="duration" data-value="299393">000ms</td>
+              <td class="duration" data-value="299393">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.compositionArchetypeIdCriteria()</td>
+              <td>3</td>
+              <td class="duration" data-value="80543">000ms</td>
+              <td class="duration" data-value="26847">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.compositionNameCriteriaUsingWHEREClause()</td>
+              <td>3</td>
+              <td class="duration" data-value="724334">000ms</td>
+              <td class="duration" data-value="241444">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.dataItemsWithSameNodeIdShouldHaveDifferentValuesIfTheyHaveDifferentNames()</td>
+              <td>1</td>
+              <td class="duration" data-value="947693">000ms</td>
+              <td class="duration" data-value="947693">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.instructionArchetypeIdCriteria()</td>
+              <td>2</td>
+              <td class="duration" data-value="72321">000ms</td>
+              <td class="duration" data-value="36160">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theDataItemsAreSelectedBasedOnBothArchetypeNodeIdAndName()</td>
+              <td>1</td>
+              <td class="duration" data-value="43686863">043ms</td>
+              <td class="duration" data-value="43686863">043ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theFollowingDataItemsShouldBeAvailableInQueryResults(DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="112033941">112ms</td>
+              <td class="duration" data-value="112033941">112ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theQueryContainsEHRIdCriteria()</td>
+              <td>3</td>
+              <td class="duration" data-value="150685">000ms</td>
+              <td class="duration" data-value="50228">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theResultsShouldBeCompositionInstances()</td>
+              <td>1</td>
+              <td class="duration" data-value="21404483">021ms</td>
+              <td class="duration" data-value="21404483">021ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theResultsShouldBeInstructionInstances()</td>
+              <td>1</td>
+              <td class="duration" data-value="64203874">064ms</td>
+              <td class="duration" data-value="64203874">064ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AqlFeaturesSteps.theTemplatesWithFollowingIdsAreAvailableToTheServer(String&gt;)</td>
+              <td>4</td>
+              <td class="duration" data-value="1861371342">1s 861ms</td>
+              <td class="duration" data-value="465342835">465ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CompositionAPISteps.aCompositionIdShouldBeReturnedByTheAPI()</td>
+              <td>3</td>
+              <td class="duration" data-value="3164669">003ms</td>
+              <td class="duration" data-value="1054889">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CompositionAPISteps.cleanUp()</td>
+              <td>9</td>
+              <td class="duration" data-value="107370613">107ms</td>
+              <td class="duration" data-value="11930068">011ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CompositionAPISteps.compositionIdShouldAllowRetrievalOfCompositionInRawFormat()</td>
+              <td>1</td>
+              <td class="duration" data-value="149688338">149ms</td>
+              <td class="duration" data-value="149688338">149ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CompositionAPISteps.compositionIdShouldAllowRetrievalOfCompositionInXmlFormat()</td>
+              <td>1</td>
+              <td class="duration" data-value="248635769">248ms</td>
+              <td class="duration" data-value="248635769">248ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">CompositionAPISteps.flatJsonFileIsCommittedToService(String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3146181085">3s 146ms</td>
+              <td class="duration" data-value="1048727028">1s 048ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">QueryWithAqlSteps.aCompositionIsPersistedUnderTheEHR()</td>
+              <td>1</td>
+              <td class="duration" data-value="1711989064">1s 711ms</td>
+              <td class="duration" data-value="1711989064">1s 711ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">QueryWithAqlSteps.aCompositionIsPersistedUnderTheEHRWithoutAnEHRIdentifier()</td>
+              <td>1</td>
+              <td class="duration" data-value="447932542">447ms</td>
+              <td class="duration" data-value="447932542">447ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">QueryWithAqlSteps.anAQLQueryShouldReturnDataPersistedIntoTheComposition()</td>
+              <td>2</td>
+              <td class="duration" data-value="329232713">329ms</td>
+              <td class="duration" data-value="164616356">164ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">QueryWithAqlSteps.cleanUp()</td>
+              <td>9</td>
+              <td class="duration" data-value="1137985">001ms</td>
+              <td class="duration" data-value="126442">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RestAPIBackgroundSteps.anEHRIsCreated()</td>
+              <td>9</td>
+              <td class="duration" data-value="707872265">707ms</td>
+              <td class="duration" data-value="78652473">078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RestAPIBackgroundSteps.theClientSystemIsLoggedIntoAServerSession()</td>
+              <td>9</td>
+              <td class="duration" data-value="2583278280">2s 583ms</td>
+              <td class="duration" data-value="287030920">287ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RestAPIBackgroundSteps.theFollowingCompositionsExistsUnderTheEHR(DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="60328788041">1m 328ms</td>
+              <td class="duration" data-value="15082197010">15s 082ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RestAPIBackgroundSteps.theOpenEHRTemplateForTheCompositionIsAvailableToTheServer(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="653237487">653ms</td>
+              <td class="duration" data-value="130647497">130ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RestAPIBackgroundSteps.theServerIsRunning()</td>
+              <td>9</td>
+              <td class="duration" data-value="18532540407">18s 532ms</td>
+              <td class="duration" data-value="2059171156">2s 059ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>90</td>
+            <td class="duration">1m 31s 057ms</td>
+            <td class="duration">1s 011ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
