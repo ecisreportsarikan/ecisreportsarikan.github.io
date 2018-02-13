@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 0) - Feature: Support for openEHR Archetype Query Language</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>EtherCIS-VEHR-features</td>
+              <td>0</td>
+            <td>13 Feb 2018, 11:31</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Support for openEHR Archetype Query Language</td>
+                    <td      class="passed"    >18</td>
+          <td      class="failed"    >1</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">19</td>
+
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >1</td>
+          <td class="total">2</td>
+
+          <td class="duration" data-value="36058226890">36s 058ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Support for openEHR Archetype Query Language</span>
+  
+
+  </div>
+
+        <div class="description indention">In order to access openEHR based data
+As A clinical informatics actor
+I want to use openEHR AQL queries to query clinical data</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">20s 370ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">The server is ready, an EHR and required templates is in place and the user logged in and created data.</div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The server is running</span>
+  
+  <span class="lead-duration duration">1s 294ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The client system is logged into a server session</span>
+  
+  <span class="lead-duration duration">024ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The templates with following ids are available to the server:</span>
+  
+  <span class="lead-duration duration">705ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Smart Growth Chart Data.v0</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">An EHR is created</span>
+  
+  <span class="lead-duration duration">044ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The following compositions exists under the EHR:</span>
+  
+  <span class="lead-duration duration">18s 302ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.0.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.1.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_End_of_Life_Patient_Preferences.v0.0.json</td>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.0.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.1.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.0.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.1.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.2.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.0.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.1.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.2.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.0.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.1.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.2.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.0.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.1.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.0.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.1.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.2.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.3.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.4.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.5.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.0.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.1.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.2.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.3.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.4.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.0.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.1.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.2.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.0.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.1.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.2.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.0.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.1.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.2.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.3.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.0.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.1.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.2.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.0.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.1.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.2.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">102ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Select composition and instruction data when Composition contains instruction</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">A composition which contains an instruction is queried. The composition sits under the EHR.
+AQL query specifies EHR id, Composition archetype node id and instruction archetype node id.
+The query uses WHERE clause to add Composition name as an extra criteria. The returned data
+consists of uid, composer, event context start time and some data from the activities under the instruction.</div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">A an AQL query that describes an instruction under a composition is created</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The query contains EHR id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Composition archetype id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Composition name criteria using WHERE clause</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">Instruction archetype id criteria</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The following data items should be available in query results:</span>
+  
+  <span class="lead-duration duration">101ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>composition_uid</td>
+                              </tr>
+                          <tr>
+                                  <td>composition_composer</td>
+                              </tr>
+                          <tr>
+                                  <td>context_start_time</td>
+                              </tr>
+                          <tr>
+                                  <td>activity_data</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-5" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">CompositionAPISteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">010ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">QueryWithAqlSteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">000ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">15s 542ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">The server is ready, an EHR and required templates is in place and the user logged in and created data.</div>
+
+  <div id="element-6" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-7" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The server is running</span>
+  
+  <span class="lead-duration duration">1s 528ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The client system is logged into a server session</span>
+  
+  <span class="lead-duration duration">027ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The templates with following ids are available to the server:</span>
+  
+  <span class="lead-duration duration">426ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Smart Growth Chart Data.v0</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">An EHR is created</span>
+  
+  <span class="lead-duration duration">028ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The following compositions exists under the EHR:</span>
+  
+  <span class="lead-duration duration">13s 531ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.0.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Adverse_Reaction_List.v1.1.json</td>
+                                  <td>IDCR - Adverse Reaction List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_End_of_Life_Patient_Preferences.v0.0.json</td>
+                                  <td>IDCR - End of Life Patient Preferences.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.0.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Immunisation_summary.v0.1.json</td>
+                                  <td>IDCR - Immunisation summary.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.0.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.1.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Order.v0.2.json</td>
+                                  <td>IDCR - Laboratory Order.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.0.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.1.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Laboratory_Test_Report.v0.2.json</td>
+                                  <td>IDCR - Laboratory Test Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.0.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.1.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Medication_Statement_List.v0.2.json</td>
+                                  <td>IDCR - Medication Statement List.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.0.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR__Minimal_MDT_Output_Report.v0.1.json</td>
+                                  <td>IDCR - Minimal MDT Output Report.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.0.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.1.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.2.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.3.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.4.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Problem_List.v1.5.json</td>
+                                  <td>IDCR - Problem List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.0.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.1.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.2.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.3.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Procedures_List.v1.4.json</td>
+                                  <td>IDCR - Procedures List.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.0.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.1.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Relevant_contacts.v0.2.json</td>
+                                  <td>IDCR - Relevant contacts.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.0.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.1.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_Request.v0.2.json</td>
+                                  <td>IDCR - Service Request.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.0.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.1.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.2.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Service_tracker.v0.3.json</td>
+                                  <td>IDCR - Service tracker.v0</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.0.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.1.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_IDCR_Vital_Signs_Encounter.v1.2.json</td>
+                                  <td>IDCR - Vital Signs Encounter.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Clinical_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Clinical Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.0.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.1.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Height_Weight.v1.2.json</td>
+                                  <td>RIPPLE - Height_Weight.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.0.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.1.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                          <tr>
+                                  <td>Composition_RIPPLE_Personal_Notes.v1.2.json</td>
+                                  <td>RIPPLE - Personal Notes.v1</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">042ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Select data item using its archetype node id and name</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention">Query compositions which contain data items that can can only be distinguished by their names.
+The query uses [atXXXX,'data item name'] syntax in SELECT clause to select specific data items.</div>
+
+  <div id="element-8" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">An AQL query that selects composition uids and data items is created</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The data items are selected based on both archetype node id and name</span>
+  
+  <span class="lead-duration duration">041ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Data items with same node id should have different values if they have different names</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
+          <a>java.lang.AssertionError: Values should be different. Actual: 2 puffs</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Values should be different. Actual: 2 puffs
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at org.junit.Assert.assertNotEquals(Assert.java:175)
+	at com.ethercis.vehr.AqlFeaturesSteps.lambda$dataItemsWithSameNodeIdShouldHaveDifferentValuesIfTheyHaveDifferentNames$4(AqlFeaturesSteps.java:175)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+	at com.ethercis.vehr.AqlFeaturesSteps.dataItemsWithSameNodeIdShouldHaveDifferentValuesIfTheyHaveDifferentNames(AqlFeaturesSteps.java:174)
+	at &#10045;.Then Data items with same node id should have different values if they have different names(code4health/Aql.feature:110)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-11" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">CompositionAPISteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">022ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">QueryWithAqlSteps.cleanUp()</span>
+                        
+  <span class="lead-duration duration">000ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
